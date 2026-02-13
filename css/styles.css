@@ -1,0 +1,509 @@
+body {
+  margin: 0;
+  font-family: "Inter Tight", sans-serif;
+  height: 800px;
+  cursor: url('media/Ellipse\ 335.png'), auto;
+  
+}
+
+@font-face {
+  font-family: "Inter Tight";
+  src: url("../fonts/InterTight-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Inter Tight";
+  src: url("../fonts/InterTight-Bold.woff2") format("woff2");
+  font-weight: 700;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 800px;
+
+}
+
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: repeat(12, 16px 1fr);
+  grid-template-rows: 168px 3px 365px 365px;
+  margin: 0;
+  margin-right: 16px;
+  height: 800px;
+ 
+}
+.f{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    grid-column: 1 / 25;
+    #po {
+        display: flex;
+        justify-content: flex-end;
+        grid-column: 1 / 25;
+        grid-row: 1 / 2;
+        padding-top: 24px;
+        text-align: end;
+    }
+
+    h1 {
+    justify-content: flex-start;
+    height: fit-content;
+    grid-column: 1 / 25;
+    font-size: 128px;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: -0.03em;
+    color: #000000;
+    margin: 0;
+    padding-left: 16px;
+    }
+}
+
+
+p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 110%;
+  letter-spacing: -0.03em;
+  color: #000000;
+  margin: 16px;
+  padding-bottom: 8px
+}
+
+
+
+#line {
+      
+    grid-column: 2 / 25;
+    grid-row: 2 / 3;
+    border-bottom: 3px solid black;
+
+}
+
+#sfera {
+    grid-column: 2 / 6;
+    grid-row: 3 / 4;
+}
+
+#ul{
+
+    
+    grid-column: 2 / 4;
+    grid-row: 4/ 5;
+    cursor: url('media/Ellipse\ 335.png'), auto;
+    margin-bottom: 235px;
+
+}
+
+
+#about {
+    grid-column: 8 / 12;
+    grid-row: 3 / 5;
+    
+}
+
+#pr1, #pr2, #pr3, #pr4 {
+    position: relative;
+    overflow: hidden;
+    cursor: url('media/Frame1171277326.png'), auto;
+}
+
+#pr1 a, #pr2 a, #pr3 a, #pr4 a {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    text-decoration: none;
+    transition: opacity 0.4s ease;
+}
+
+#pr1 p, #pr2 p, #pr3 p, #pr4 p {
+    margin: 16px;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+    transition: opacity 0.4s ease;
+}
+
+#pr1 img, #pr2 img, #pr3 img, #pr4 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.5s ease;
+}
+
+/* ЭФФЕКТЫ ПРИ НАВЕДЕНИИ */
+#pr1:hover a, #pr2:hover a, #pr3:hover a, #pr4:hover a,
+#pr1:hover p, #pr2:hover p, #pr3:hover p, #pr4:hover p {
+    opacity: 0;
+    cursor: url('media/Frame1171277326.png'), auto;
+}
+
+#pr1:hover img, #pr2:hover img, #pr3:hover img, #pr4:hover img {
+    opacity: 1;
+    cursor: url('media/Frame1171277326.png'), auto;
+}
+
+/* ИНДИВИДУАЛЬНЫЕ СТИЛИ КАРТОЧЕК */
+#pr1 {
+    display: flex;
+    grid-column: 14 / 19;
+    grid-row: 3 / 4;
+    border: 3px solid black;
+    border-top: 0;
+    justify-content: flex-start;
+    align-items: end;
+    cursor: url('media/Frame1171277326.png'), auto;
+}
+
+#pr2 {
+    display: flex;
+    grid-column: 19 / 25;
+    grid-row: 3 / 4;
+    border: 3px solid black;
+    border-top: 0;
+    border-left: 0;
+    justify-content: flex-start;
+    align-items: end;
+    cursor: url('media/Frame1171277326.png'), auto;
+}
+
+#pr3 {
+    display: flex;
+    grid-column: 14 / 19;
+    grid-row: 4 / 5;
+    border: 3px solid black;
+    border-top: 0;
+    justify-content: flex-start;
+    align-items: end;
+    cursor: url('media/Frame1171277326.png'), auto;
+}
+
+#pr4 {
+    display: flex;
+    grid-column: 19 / 25;
+    grid-row: 4 / 5;
+    border: 3px solid black;
+    border-top: 0;
+    border-left: 0;
+    justify-content: flex-start;
+    align-items: end;
+    cursor: url('media/Frame1171277326.png'), auto;
+}
+
+button {
+  background: none;       /* Убираем фон */
+  border: none;          /* Убираем рамку */
+  color: #000000;        /* Цвет текста (акцентный) */
+  padding: 0;            /* Убираем отступы, если не нужны */
+  font-family: inherit;  /* Шрифт как у родителя */
+  font-size: inherit;    /* Размер как у родителя */
+  cursor: pointer;       /* Указатель при наведении */
+  text-decoration: none; /* Убираем подчеркивание */
+  transition: color 0.3s; /* Плавный переход для эффекта */
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 110%;
+  letter-spacing: -0.03em;
+  color: #000000;
+  cursor: url('media/Frame1171277326.png'), auto;
+}
+
+button:hover {
+  color: #000000; 
+  cursor: url('media/Frame1171277326.png'), auto;       /* Цвет при наведении */
+  
+  
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    grid-column: 2 / 7;
+    grid-row: 4 / 5;
+    justify-content: flex-end;
+    align-items: start;
+    
+  
+
+}
+
+#tg {
+
+    img {
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        margin-left: 8px;
+    }
+
+    
+}
+
+
+#tg:hover {
+
+    cursor: url('media/Frame1171277326.png'), auto;
+
+    img {
+        opacity: 1;
+        margin-left: 8px;
+        transition: opacity 0.4s ease;
+    }
+    
+    
+    
+}
+
+#mail {
+
+    cursor: url('media/Frame1171277326.png'), auto;
+
+    img {
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        margin-left: 8px;
+    }
+    
+    
+}
+
+
+#mail:hover {
+    cursor: url('media/Frame1171277326.png'), auto;
+    img {
+        opacity: 1;
+        margin-left: 8px;
+        transition: opacity 0.4s ease;
+    }
+}
+
+
+
+
+@media screen and (max-width: 700px) {
+    body {
+        height: fit-content;
+    }
+    .hero {
+        position: relative;
+        width: 100%;
+        height: fit-content;
+
+    }
+    .hero__grid {
+        display: grid;
+        grid-template-columns: repeat(6, 8px 1fr);
+        grid-template-rows: repeat(12, 1fr);
+        margin: 0;
+        height: 2600px;
+        overflow: scroll;
+        /* 1. Добавляем расстояние между строками сетки */
+        gap: 16px 0; /* 16px между строками, 0 между колонками */
+    }
+
+
+    .f{
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        grid-column: 1 / 25;
+
+        #po {
+            display: flex;
+            justify-content: flex-end;
+            grid-column: 1 / 25;
+            grid-row: 1 / 2;
+            padding-top: 4px;
+            text-align: end;
+            font-size: 16px;
+        }
+
+        h1 {
+            justify-content: flex-start;
+            height: fit-content;
+            grid-column: 1 / 25;
+            font-size: 32px;
+            font-weight: 400;
+            line-height: 110%;
+            letter-spacing: -0.03em;
+            color: #000000;
+            margin: 0;
+            padding-left: 16px;
+            padding-top: 16px;
+        }
+    }
+
+  
+
+    p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 110%;
+        letter-spacing: -0.03em;
+        color: #000000;
+        margin: 16px;
+        padding-bottom: 8px
+    }
+
+    #line {
+        display: none;
+        border: 0px ;
+    }
+
+    #sfera {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-column: 1 / 25;
+        grid-row: 2 / 3;
+        align-content: center;
+        text-align: center;
+        height: 500px;
+    }
+
+    #contact {
+        display: flex;
+        flex-direction: column;
+        grid-column: 1 / 25;
+        grid-row: 3 / 4;
+        justify-content: flex-start;
+        align-items: start;
+        height: fit-content;
+
+        .st {
+            width: 20px;
+            height: 20px;
+            opacity: 1;
+        }
+ 
+    }
+    
+    #ul{
+        width: 143px;
+        height: 143px;
+        grid-column: 1 / 25;
+        grid-row: 3 / 4;
+        cursor: url('media/Ellipse\ 335.png'), auto;
+        margin-bottom: 8px;
+    }
+
+    button {
+        font-size: 32px;
+        padding-left: 16px;
+    }
+
+    #about {
+        grid-column: 16 / 25;             
+        grid-row: 4 / 5;
+        
+    }
+
+    /* ===== ИЗМЕНЕНИЯ ДЛЯ КАРТОЧЕК ===== */
+    #pr1, #pr2, #pr3, #pr4 {
+        display: flex;
+        min-height: 340px;
+        position: relative;
+        /* 2.1 Делаем карточку колонкой, чтобы картинка была сверху */
+        flex-direction: column;
+        /* 2.2 Убираем align-items: end, чтобы элементы не прижимались к низу.
+              По умолчанию они будут выстраиваться от начала (сверху) */
+        align-items: flex-start; /* или stretch, но для ссылки лучше stretch */
+        /* 2.3 Убираем justify-content: flex-start, он тут и не нужен был */
+        
+        /* 2.4 Важно: убираем лишние границы и делаем отступ внутри карточки,
+              чтобы текст не прилипал к картинке. */
+        border: none; /* Убираем все рамки */
+        padding: 0; 
+        /* Добавим небольшой отступ снизу для самой карточки, но лучше использовать gap сверху */
+    }
+
+    #pr1 a, #pr2 a, #pr3 a, #pr4 a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        /* 2.5 Ссылка теперь тоже колонка, но мы хотим, чтобы текст был под картинкой */
+        align-items: flex-start;
+        justify-content: flex-start; /* Текст идет сразу после картинки */
+        text-decoration: none;
+    }
+
+    #pr1 p, #pr2 p, #pr3 p, #pr4 p {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        /* 2.6 Добавляем отступ сверху для текста, чтобы он не прилипал к картинке */
+        margin-top: 8px; /* Можно сделать 8px или 16px по желанию */
+        /* Добавим отступы по бокам, чтобы текст не упирался в края */
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    #pr1 img, #pr2 img, #pr3 img, #pr4 img {
+        display: flex;
+        opacity: 1;
+        /* 2.7 Убедимся, что картинка не растягивается, а занимает логичную высоту */
+        position: relative; /* Меняем с absolute на relative, чтобы она была в потоке */
+        width: 100%;
+        height: auto; /* Высота автоматически подстроится под ширину */
+        object-fit: cover; /* Это все еще полезно, если картинка не вписывается */
+        /* Убираем лишние absolute-свойства */
+        top: auto;
+        left: auto;
+    }
+
+    /* ЭФФЕКТЫ ПРИ НАВЕДЕНИИ (для мобилок они не особо нужны, но можно оставить) */
+    #pr1:hover a, #pr2:hover a, #pr3:hover a, #pr4:hover a,
+    #pr1:hover p, #pr2:hover p, #pr3:hover p, #pr4:hover p {
+        opacity: 1;
+    }
+
+    #pr1:hover img, #pr2:hover img, #pr3:hover img, #pr4:hover img {
+        opacity: 1;
+    }
+
+    /* ИНДИВИДУАЛЬНЫЕ СТИЛИ КАРТОЧЕК */
+    /* 2.8 Теперь для всех карточек просто убираем лишние границы и выравнивание */
+    #pr1 {
+        grid-column: 1 / 25;
+        grid-row: 5 / 6;
+        border: none; /* Убираем рамку */
+        cursor: pointer;
+    }
+
+    #pr2 {
+        grid-column: 1 / 25;
+        grid-row: 6 / 7;
+        border: none;
+        cursor: pointer;
+    }
+
+    #pr3 {
+        grid-column: 1 / 25;
+        grid-row: 7 / 8;
+        border: none; /* Убираем рамку */
+        cursor: pointer;
+    }
+
+    #pr4 {
+        grid-column: 1 / 25;
+        grid-row: 8 / 9;
+        border: none;
+        cursor: pointer;
+    }
+    /* ===== КОНЕЦ ИЗМЕНЕНИЙ ДЛЯ КАРТОЧЕК ===== */
+
+}
