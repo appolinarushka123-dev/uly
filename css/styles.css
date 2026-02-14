@@ -314,9 +314,15 @@ button:hover {
 
 
 @media screen and (max-width: 700px) {
-    body {
-        height: fit-content;
-    }
+
+    html, body {
+        height: auto;
+        min-height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        }
+    
+   
     .hero {
         position: relative;
         width: 100%;
@@ -328,8 +334,7 @@ button:hover {
         grid-template-columns: repeat(6, 8px 1fr);
         grid-template-rows: repeat(12, 1fr);
         margin: 0;
-        height: 2600px;
-        overflow: scroll;
+        
         /* 1. Добавляем расстояние между строками сетки */
         gap: 16px 0; /* 16px между строками, 0 между колонками */
     }
@@ -448,6 +453,7 @@ button:hover {
               чтобы текст не прилипал к картинке. */
         border: none; /* Убираем все рамки */
         padding: 0; 
+        margin-bottom: 16px;
         /* Добавим небольшой отступ снизу для самой карточки, но лучше использовать gap сверху */
     }
 
